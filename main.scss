@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(187, 186, 186);
+}
+
+.wrapper{
+    position: relative;
+    min-height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    h1{
+        font-weight: 700;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: white;
+    }
+    .tac{
+        color: rgb(187, 186, 186);
+        padding: 0px 5px;
+        border-radius: 5px;
+        animation: slide-down 5s infinite;
+    }
+    p{
+        height: 1px;
+        margin-bottom: 30px;
+        display: block;
+        font-size: 50px;
+        font-weight: bold;
+    }
+}
+
+    .board{
+        max-height: 500px;
+        min-height: 500px;
+        max-width: 500px;
+        min-width: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: solid 5px #ffffff;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgb(107, 107, 107);
+    &__place{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        font-family: 'Merienda', cursive;
+        color: #fff;
+        background-color: #48b1e2;
+        cursor: pointer;
+    }
+}
+
+.button-panel{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    button{
+        display: inline-block;
+        min-width: 200px;
+        width: 20%;
+        padding: 10px;
+        font-size: 31px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: inset 0 0 0 0 #00000027;
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+        cursor: pointer;
+    }
+    .restart{
+        background-color: #e94a4a;
+    }
+    .start{
+        background-color: #6dca79;
+    }
+    button:hover{
+        box-shadow: inset 400px 0 0 0 #00000027;
+    }
+    button:active{
+        transform: scale(80%);
+    }
+    button:focus{
+        box-shadow: inset 400px 0 0 0 #00000027;
+    }
+}
+
+
+
+
+@keyframes slide-down {
+    0%{
+        box-shadow: inset 0px 100px 0 0 #48b1e2;
+    }
+    50%{
+        box-shadow: inset 0px 0px 0 0 #48b1e2;
+    }
+    
+    100%{
+        box-shadow: inset  0px -100px 0 0  #48b1e2;
+    }
+}
+
+
+
+
